@@ -20,4 +20,4 @@ open http://localhost:3000
 
 ## Demo
 
-Please go to https://heaven-hr-react-interview-exercise.herokuapp.com
+Please go to https://heaven-hr-react-exercise.herokuapp.com

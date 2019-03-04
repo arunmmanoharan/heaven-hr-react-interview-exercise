@@ -172,7 +172,7 @@ class Pagination extends Component {
 }
 
 Pagination.propTypes = {
-    items: PropTypes.arrayOf(PropTypes.shapeOf({
+    items: PropTypes.arrayOf(PropTypes.shape({
         name: PropTypes.string.isRequired,
         gender: PropTypes.string.isRequired,
         starred: PropTypes.bool.isRequired,

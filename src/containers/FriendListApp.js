@@ -5,6 +5,7 @@ import {connect} from 'react-redux';
 
 import {addFriend, deleteFriend, starFriend} from '../actions/FriendsActions';
 import {FriendList, AddFriendInput, PaginationContainer, ItemsPerPage} from '../components';
+import Pagination from '../components/Pagination';
 
 class FriendListApp extends Component {
 
@@ -57,16 +58,15 @@ class FriendListApp extends Component {
 }
 
 FriendListApp.propTypes = {
-    pagingOption: PropTypes.number.isRequired,
-    friendsById: PropTypes.arrayOf(PropTypes.shape({
+    items: PropTypes.arrayOf(PropTypes.shape({
         name: PropTypes.string.isRequired,
         gender: PropTypes.string.isRequired,
         starred: PropTypes.bool.isRequired,
         id: PropTypes.number
     })),
-    addFriend: PropTypes.func.isRequired,
-    deleteFriend: PropTypes.func.isRequired,
-    starFriend: PropTypes.func.isRequired
+    initialPage: PropTypes.number.isRequired,
+    numPerPage: PropTypes.number.isRequired,
+    onChangePage: PropTypes.func.isRequired
 };
 
 const mapStateToProps = (state) => {

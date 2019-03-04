@@ -58,7 +58,7 @@ class FriendListApp extends Component {
 
 FriendListApp.propTypes = {
     pagingOption: PropTypes.number.isRequired,
-    friendsById: PropTypes.arrayOf(PropTypes.shapeOf({
+    friendsById: PropTypes.arrayOf(PropTypes.shape({
         name: PropTypes.string.isRequired,
         gender: PropTypes.string.isRequired,
         starred: PropTypes.bool.isRequired,
